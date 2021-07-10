@@ -7,12 +7,12 @@
 ![tensorflow](https://img.shields.io/badge/tensorflow-2.5.0-orange?style=flat-square)
 ![keras](https://img.shields.io/badge/keras-2.5.0-orange?style=flat-square)
 ### How to use
-First create virtual environment (personally I used `virtualenv` tool) and activate it. Then install all packages shown above. Make sure your camera 
-is not being used by any other program at the moment. When you are finished, you can run `camera.py` script in terminal using `python3 camera.py` command.
-No additional arguments are needed. After a few seconds of initialization program will show live camera footage. Script will be looking for faces on every frame
-of the video. When it will find one, it will track it as long as it's possible. After breaking the connection between face and program (for ex. by covering 
-your face with facemask), script will search for a new face to analyse. Program analyses face to determine its gender, age group and ethnicity. Program will show
-camera footage with predictions written above when face is found. Accuracy of predictions is divided into groups:`gender: 98%` `age group: 70%` `ethnicity: 85%`.
+First create virtual environment (personally I used `virtualenv` tool) and activate it. Then install all packages shown above. Make sure your camera is not being used by any other program at the moment. When you are finished, you can run `camera.py` script in terminal using `python3 camera.py` command. No additional arguments are needed. After a few seconds of initialization program will show live camera footage. Script will be looking for faces on every frame of the video. When it will find one, it will track it as long as it's possible. After breaking the connection between face and program (for ex. by covering your face with facemask), script will search for a new face to analyse. Program analyses face to determine its gender, age group and ethnicity. Program will show camera footage with predictions written above when face is found. Accuracy of predictions is divided into groups:`gender: 98%` `age group: 70%` `ethnicity: 85%`.
 ### Camera
 ### Functions
 ### Models
+In this project I'm using pretrained models from my past projects. Models have been trained similarly to ones in `cnn-brain-tumor` and `cnn-facemask-detection` repositories. Models have been trained using free databases found on UTKFace website.\
+`gender.h5 - Nadam(learning_rate=0.0003), loss='log_cosh', epochs=30`\
+`age.h5 - Nadam(learning_rate=0.0003), loss='log_cosh', epochs=60`\
+`ethnicity.h5 - Nadam(learning_rate=0.0003), loss='log_cosh', epochs=60`\
+Database source: https://susanqq.github.io/UTKFace/
